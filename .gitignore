@@ -1,0 +1,126 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+.env
+
+# PyTorch/ML models
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+
+# Large model directories (but keep structure)
+summary-ai/models/*/pytorch_model*.bin
+summary-ai/models/*/model*.safetensors
+summary-ai/models/*/training_args.bin
+summary-ai/models/*/optimizer.pt
+summary-ai/models/*/scheduler.pt
+summary-ai/models/*/rng_state.pth
+
+# Keep adapter files but ignore large checkpoints
+summary-ai/models/*/checkpoint-*/pytorch_model.bin
+summary-ai/models/*/checkpoint-*/model.safetensors
+summary-ai/models/*/checkpoint-*/training_args.bin
+
+# Data files (too large for git)
+summary-ai/data/raw/
+summary-ai/data/processed/*.json
+backup/
+
+# Results and logs
+results/
+wandb/
+tensorboard_logs/
+*.log
+training_log.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Test outputs
+baseline_results.json
+finetuned_results.json
+
+# Ollama models
+ollama_model/
+ollama_model_fixed/
+ollama_model_gguf/
+*.gguf
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Hugging Face cache
+.huggingface/
+
+# Environment variables
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Windows
+desktop.ini
+
+# Coverage reports
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Local model files to ignore
+Modelfile
+Modelfile_*
+
+# But keep important configs
+!summary-ai/models/*/adapter_config.json
+!summary-ai/models/*/adapter_model.safetensors
+!summary-ai/models/*/tokenizer*
+!summary-ai/models/*/special_tokens_map.json
+!summary-ai/models/*/trainer_state.json
+
+# Documentation builds
+docs/_build/
+site/
